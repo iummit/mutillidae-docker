@@ -1,0 +1,36 @@
+version: "3.5"
+
+networks:
+  internal_net:
+    external: false
+
+services:
+  server:
+    build: ./
+#    image: image:latest
+    environment:
+      - DB_TYPE=mysql
+      - DB_HOST=db:3306
+      - DB_NAME=mutillidaedb_
+      - DB_USER=mutillidae
+    env_file:
+      - ./server.env
+    networks:
+      - internal_net
+    ports:
+       - "31080:80"
+       - "31443:443"
+    depends_on:
+      - db
+
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      - MYSQL_USER=mutillidae
+      - MYSQL_DATABASE=mutillidaedb_
+    env_file: 
+      - ./db.env
+    networks:
+      - internal_net
+
