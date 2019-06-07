@@ -12,4 +12,4 @@ To use Mutillidae, navigate to:
 
 Note: When you receive the error message about the DB being offline, click on the "setup/reset the DB" link followed by OK.  
 
-
+This yml file assumes that you have cloned mutillidae in an adjacent folder.  If it is not, you will need to edit the build location to reflect that.
