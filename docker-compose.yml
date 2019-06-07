@@ -2,7 +2,7 @@ version: "3.5"
 
 services:
   server:
-    build: ./
+    build: ../mutillidae
     ports:
        - "31080:80"
        - "31443:443"
