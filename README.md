@@ -10,6 +10,6 @@ To use Mutillidae, navigate to:
 
 * 0.0.0.0:31080/mutillidae
 
-Note: Do not supply a password to DB, when you receive the error message about the DB being offline, click on the "setup/reset the DB" link followed by OK.  
+Note: When you receive the error message about the DB being offline, click on the "setup/reset the DB" link followed by OK.  
 
-The server.env and db.env are vestigial files for future use.
+
